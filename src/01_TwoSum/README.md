@@ -38,8 +38,4 @@ Can you come up with an algorithm that is less than O(n2) time complexity?
 
 #### Answer: 
 
-No. Let `nums.length == n`. 
-There are `n(n-1)` ordered pairs of numbers.
-Assuming the solution pair is the last un-ordered pair we check,
-we will have made `n(n-1)/2` comparisons.
-This gives `O(n^2)`. 
+Q: is the map solution O(n)?
