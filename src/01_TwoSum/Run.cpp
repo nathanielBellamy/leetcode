@@ -34,5 +34,13 @@ namespace TwoSum {
         std::cout << " == 01_TwoSum END == " << std::endl;
         return 0;
     }
-
 }
+
+
+//static void BM_OPTIMIZED_TwoSum(benchmark::State& state) {
+//  for (auto _ : state) {
+//    TwoSum::Solutions::OptimizedtwoSum({1, 2, 3}, 4);
+//  }
+//}
+
+//BENCHMARK(BM_NSLC_main);

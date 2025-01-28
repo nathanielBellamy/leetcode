@@ -5,10 +5,14 @@
 #ifndef MAIN_H
 #define MAIN_H
 
-#include "./01_TwoSum/Run.h"
-
 #include <iostream>
 
-int main();
+// helpers
+#include <benchmark/benchmark.h>
+
+// problems
+#include "./01_TwoSum/Run.h"
+
+int NSLC_main();
 
 #endif //MAIN_H
