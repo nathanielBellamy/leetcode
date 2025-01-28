@@ -5,15 +5,14 @@
 #include "Main.h"
 
 
-int NSLC_main() {
+int main() {
   std::cout << " == NSLeetCode START ==" << std::endl;
 
   // 01_TwoSum
   TwoSum::Run twoSumRun;
-  twoSumRun.run();
+  twoSumRun.first();
+  twoSumRun.optimized();
 
   std::cout << " == NSLeetCode END ==" << std::endl;
   return 0;
 }
-
-BENCHMARK_MAIN();

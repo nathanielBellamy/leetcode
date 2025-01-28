@@ -9,38 +9,48 @@ namespace TwoSum {
 
     using namespace Solutions;
 
-    int Run::run() {
-        std::cout << " == 01_TwoSum START == " << std::endl;
-
-      Examples examples;
-
-      std::vector<Solution> solutions;
+    void Run::first() {
       First first;
-      solutions.push_back(first);
-      Optimized optimized;
-      solutions.push_back(optimized);
 
-      for (auto solution : solutions) {
-        std::cout << " == TwoSum Solution == " << std::endl;
-        for (auto example : examples.list) {
-          auto actual = first.twoSum(example.nums, example.target);
-          if (actual != example.expected)
-            throw std::runtime_error("\n\n TwoSum Error: Wrong Result \n\n");
-          std::cout << "Example SUCCESS" << std::endl;
-        }
+      for (auto example : examples.list) {
+        auto actual = first.twoSum(example.nums, example.target);
+        if (actual != example.expected)
+          throw std::runtime_error("\n\n TwoSum::Solutions::First Error: Wrong Result \n\n");
       }
-
-        std::cout << " == 01_TwoSum SUCCESS == " << std::endl;
-        std::cout << " == 01_TwoSum END == " << std::endl;
-        return 0;
     }
+
+    void Run::optimized() {
+      Optimized optimized;
+
+      for (auto example : examples.list) {
+        auto actual = optimized.twoSum(example.nums, example.target);
+        if (actual != example.expected)
+          throw std::runtime_error("\n\n TwoSum::Solutions::Optimized Error: Wrong Result \n\n");
+      }
+    }
+
+//    int Run::run() {
+//        std::cout << " == 01_TwoSum START == " << std::endl;
+//
+//      Examples examples;
+//
+//      std::vector<Solution> solutions;
+//      solutions.push_back(first);
+//      Optimized optimized;
+//      solutions.push_back(optimized);
+//
+//      for (auto solution : solutions) {
+//        std::cout << " == TwoSum Solution == " << std::endl;
+//        for (auto example : examples.list) {
+//          auto actual = first.twoSum(example.nums, example.target);
+//          if (actual != example.expected)
+//            throw std::runtime_error("\n\n TwoSum Error: Wrong Result \n\n");
+//          std::cout << "Example SUCCESS" << std::endl;
+//        }
+//      }
+//
+//        std::cout << " == 01_TwoSum SUCCESS == " << std::endl;
+//        std::cout << " == 01_TwoSum END == " << std::endl;
+//        return 0;
+//    }
 }
-
-
-//static void BM_OPTIMIZED_TwoSum(benchmark::State& state) {
-//  for (auto _ : state) {
-//    TwoSum::Solutions::OptimizedtwoSum({1, 2, 3}, 4);
-//  }
-//}
-
-//BENCHMARK(BM_NSLC_main);

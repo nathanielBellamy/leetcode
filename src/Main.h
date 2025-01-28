@@ -12,7 +12,10 @@
 
 // problems
 #include "./01_TwoSum/Run.h"
+#include "./01_TwoSum/BenchmarkTwoSum.h"
 
-int NSLC_main();
+int main();
+
+//BENCHMARK_MAIN();
 
 #endif //MAIN_H

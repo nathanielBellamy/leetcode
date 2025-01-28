@@ -7,6 +7,7 @@
 
 #include <iostream>
 #include <cassert>
+#include <benchmark/benchmark.h>
 #include "Examples.h"
 #include "Solutions/First.h"
 #include "Solutions/Optimized.h"
@@ -14,8 +15,12 @@
 namespace TwoSum {
 
 class Run {
-    public:
-      int run();
+  Examples examples;
+
+  public:
+//      int run();
+    void first();
+    void optimized();
 };
 
 }

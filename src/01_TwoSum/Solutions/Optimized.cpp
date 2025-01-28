@@ -17,9 +17,10 @@ std::vector<int> Optimized::twoSum(std::vector<int>& nums, int target) {
     if (map.find(compliment) != map.end()) {
       result.push_back(map.at(compliment));
       result.push_back(i);
+      return result;
     }
 
-    map.insert({compliment, i});
+    map.insert({nums[i], i});
   }
 
   return result;
