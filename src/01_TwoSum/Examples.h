@@ -1,20 +1,15 @@
 //
-// Created by ns on 1/26/25.
+// Created by ns on 1/27/25.
 //
 
-#ifndef SOLUTION_H
-#define SOLUTION_H
+#ifndef EXAMPLES_H
+#define EXAMPLES_H
 
 #include <vector>
 #include "Example.h"
 
-namespace TwoSum {
-
-class Solution {
-  public:
-    std::vector<int> twoSum(std::vector<int>& nums, int target);
-
-    std::vector<Example> examples = {
+struct Examples {
+    std::vector<Example> list = {
         {
             { 3, 2, 4 },
             6,
@@ -33,8 +28,4 @@ class Solution {
     };
 };
 
-}
-
-
-
-#endif //SOLUTION_H
+#endif //EXAMPLES_H

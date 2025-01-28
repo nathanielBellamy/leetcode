@@ -1,12 +1,13 @@
 //
-// Created by ns on 1/26/25.
+// Created by ns on 1/27/25.
 //
 
-#include "Solution.h"
+#include "First.h"
 
 namespace TwoSum {
+namespace Solutions {
 
-std::vector<int> Solution::twoSum(std::vector<int>& nums, int target) {
+std::vector<int> First::twoSum(std::vector<int>& nums, int target) {
   std::vector<int> result;
 
   auto size = nums.size();
@@ -23,4 +24,5 @@ std::vector<int> Solution::twoSum(std::vector<int>& nums, int target) {
   return result;
 }
 
+} // Solutions
 } // TwoSum

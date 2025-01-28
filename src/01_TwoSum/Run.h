@@ -7,7 +7,9 @@
 
 #include <iostream>
 #include <cassert>
-#include "Solution.h"
+#include "Examples.h"
+#include "Solutions/First.h"
+#include "Solutions/Optimized.h"
 
 namespace TwoSum {
 

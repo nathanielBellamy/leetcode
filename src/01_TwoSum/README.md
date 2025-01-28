@@ -38,4 +38,12 @@ Can you come up with an algorithm that is less than O(n2) time complexity?
 
 #### Answer: 
 
-Q: is the map solution O(n)?
+- Yes and no. 
+- Yes in that such an algorithm exists.
+- No in that I did not come up with it. 
+- Looping through `nums`, store the `{compliment = target - nums[i], i}` in a map.
+- When you come across `compliment` in `nums`,
+  which is guaranteed to exist by the constraints,
+  return the current index 
+  and the index with key `compliment` in the map.
+- This only requires one loop through `nums` and is thus `O(n)`.
