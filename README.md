@@ -3,11 +3,7 @@
 # LeetCode
 
 ### Dependencies
-- googlebenchmark
+- [googlebenchmark](https://github.com/google/benchmark)
 
 ### Benchmarks
-- To run benchmarks
-  - comment out `main`
-  - un-comment `BENCHMARK_MAIN()`
-  - build + run
-
+- To run benchmarks, flip the `NSLC_BENCHMARK` flag to `true` in `main.h`

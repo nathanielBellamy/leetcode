@@ -5,6 +5,8 @@
 #include "Main.h"
 
 
+#if NSLC_BENCHMARK
+#else
 int main() {
   std::cout << " == NSLeetCode START ==" << std::endl;
 
@@ -16,3 +18,4 @@ int main() {
   std::cout << " == NSLeetCode END ==" << std::endl;
   return 0;
 }
+#endif

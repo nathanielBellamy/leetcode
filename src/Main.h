@@ -14,8 +14,13 @@
 #include "./01_TwoSum/Run.h"
 #include "./01_TwoSum/BenchmarkTwoSum.h"
 
-int main();
+#define NSLC_BENCHMARK false
 
-//BENCHMARK_MAIN();
+#if NSLC_BENCHMARK
+BENCHMARK_MAIN();
+#else
+int main();
+#endif
+
 
 #endif //MAIN_H
