@@ -14,6 +14,8 @@ namespace Solutions {
 
 class First : public Solution {
   public:
+    std::string getTitle() override;
+    std::string getRuntimeComplexity() override;
     std::vector<int> twoSum(std::vector<int>& nums, int target) override;
 };
 

@@ -13,7 +13,9 @@ namespace Solutions {
 
 class Solution {
   public:
-    virtual std::vector<int> twoSum(std::vector<int>& nums, int target) { return {}; };
+    virtual std::string getTitle() = 0;
+    virtual std::string getRuntimeComplexity() = 0;
+    virtual std::vector<int> twoSum(std::vector<int>& nums, int target) = 0;
 };
 
 

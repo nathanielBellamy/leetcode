@@ -7,6 +7,14 @@
 namespace TwoSum {
 namespace Solutions {
 
+std::string Optimized::getTitle() {
+  return "Optimized";
+}
+
+std::string Optimized::getRuntimeComplexity() {
+  return "O(n)";
+}
+
 std::vector<int> Optimized::twoSum(std::vector<int>& nums, int target) {
   std::vector<int> result;
   std::unordered_map<int, int> map;

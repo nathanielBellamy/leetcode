@@ -12,8 +12,7 @@ int main() {
 
   // 01_TwoSum
   TwoSum::Run twoSumRun;
-  twoSumRun.first();
-  twoSumRun.optimized();
+  twoSumRun.run();
 
   std::cout << " == NSLeetCode END ==" << std::endl;
   return 0;

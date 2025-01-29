@@ -18,7 +18,7 @@ class Run {
   Examples examples;
 
   public:
-//      int run();
+    int run();
     void first();
     void optimized();
 };

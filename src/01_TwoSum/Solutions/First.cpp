@@ -3,9 +3,18 @@
 //
 
 #include "First.h"
+#include <iostream>
 
 namespace TwoSum {
 namespace Solutions {
+
+std::string First::getTitle() {
+  return "First";
+}
+
+std::string First::getRuntimeComplexity() {
+  return "O(n^2)";
+}
 
 std::vector<int> First::twoSum(std::vector<int>& nums, int target) {
   std::vector<int> result;
