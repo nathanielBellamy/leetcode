@@ -15,7 +15,7 @@
 namespace TwoSum {
 namespace Solutions {
 
-class Optimized : public Solution {
+class Second : public Solution {
   public:
     std::string getTitle() override;
     std::string getRuntimeComplexity() override;

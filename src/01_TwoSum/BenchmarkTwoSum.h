@@ -16,15 +16,15 @@ static void BM_01_TwoSum_First(benchmark::State& state) {
   }
 }
 
-static void BM_01_TwoSum_Optimized(benchmark::State& state) {
+static void BM_01_TwoSum_Second(benchmark::State& state) {
   TwoSum::Run run;
   for (auto _ : state) {
-    run.optimized();
+    run.second();
   }
 }
 
 BENCHMARK(BM_01_TwoSum_First);
-BENCHMARK(BM_01_TwoSum_Optimized);
+BENCHMARK(BM_01_TwoSum_Second);
 
 
 

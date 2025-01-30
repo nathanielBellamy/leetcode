@@ -16,8 +16,8 @@ add_library(01_TwoSum
     Solutions/Solution.h
     Solutions/First.h
     Solutions/First.cpp
-    Solutions/Optimized.h
-    Solutions/Optimized.cpp
+    Solutions/Second.h
+    Solutions/Second.cpp
 )
 
 target_link_libraries(01_TwoSum

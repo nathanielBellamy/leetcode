@@ -10,7 +10,7 @@
 #include <benchmark/benchmark.h>
 #include "Examples.h"
 #include "Solutions/First.h"
-#include "Solutions/Optimized.h"
+#include "Solutions/Second.h"
 
 namespace TwoSum {
 
@@ -20,7 +20,7 @@ class Run {
   public:
     int run();
     void first();
-    void optimized();
+    void second();
 };
 
 }

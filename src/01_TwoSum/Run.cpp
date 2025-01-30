@@ -19,13 +19,13 @@ namespace TwoSum {
       }
     }
 
-    void Run::optimized() {
-      Optimized optimized;
+    void Run::second() {
+      Second second;
 
       for (auto example : examples.list) {
-        auto actual = optimized.twoSum(example.nums, example.target);
+        auto actual = second.twoSum(example.nums, example.target);
         if (actual != example.expected)
-          throw std::runtime_error("\n\n TwoSum::Solutions::Optimized Error: Wrong Result \n\n");
+          throw std::runtime_error("\n\n TwoSum::Solutions::Second Error: Wrong Result \n\n");
       }
     }
 
@@ -35,11 +35,11 @@ namespace TwoSum {
       Examples examples;
 
       First* first = new First;
-      Optimized* optimized = new Optimized;
+      Second* second = new Second;
 
       std::vector<Solution*> solutions;
       solutions.push_back(first);
-      solutions.push_back(optimized);
+      solutions.push_back(second);
 
       for (auto solution : solutions) {
         std::cout << " == TwoSum Solution : " << solution->getTitle() << " : " << solution->getRuntimeComplexity() << " == "  << std::endl;
@@ -52,7 +52,7 @@ namespace TwoSum {
       }
 
       delete first;
-      delete optimized;
+      delete second;
 
       std::cout << " == 01_TwoSum SUCCESS == " << std::endl;
       std::cout << " == 01_TwoSum END == " << std::endl;

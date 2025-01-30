@@ -2,20 +2,20 @@
 // Created by ns on 1/27/25.
 //
 
-#include "Optimized.h"
+#include "Second.h"
 
 namespace TwoSum {
 namespace Solutions {
 
-std::string Optimized::getTitle() {
-  return "Optimized";
+std::string Second::getTitle() {
+  return "Second";
 }
 
-std::string Optimized::getRuntimeComplexity() {
+std::string Second::getRuntimeComplexity() {
   return "O(n)";
 }
 
-std::vector<int> Optimized::twoSum(std::vector<int>& nums, int target) {
+std::vector<int> Second::twoSum(std::vector<int>& nums, int target) {
   std::vector<int> result;
   std::unordered_map<int, int> map;
 
