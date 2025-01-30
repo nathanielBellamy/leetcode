@@ -2,8 +2,8 @@
 // Created by ns on 1/27/25.
 //
 
-#ifndef SOLUTION_H
-#define SOLUTION_H
+#ifndef TWOSUM_SOLUTION_H
+#define TWOSUM_SOLUTION_H
 
 #include <vector>
 #include <string>

@@ -2,11 +2,13 @@
 // Created by ns on 1/27/25.
 //
 
-#ifndef EXAMPLES_H
-#define EXAMPLES_H
+#ifndef TWOSUM_EXAMPLES_H
+#define TWOSUM_EXAMPLES_H
 
 #include <vector>
 #include "Example.h"
+
+namespace TwoSum {
 
 struct Examples {
     std::vector<Example> list = {
@@ -129,5 +131,7 @@ struct Examples {
         }
     };
 };
+
+} // TwoSum
 
 #endif //EXAMPLES_H

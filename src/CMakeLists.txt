@@ -9,6 +9,9 @@ find_package(benchmark REQUIRED) # google benchmark
 add_subdirectory(
         /Users/ns/code/leetcode/src/01_TwoSum
 )
+add_subdirectory(
+        /Users/ns/code/leetcode/src/02_AddTwoNumbers
+)
 
 add_executable(NSLeetCode
         Main.h
@@ -19,6 +22,7 @@ target_link_libraries(NSLeetCode
     PUBLIC
     benchmark::benchmark
     01_TwoSum
+    02_AddTwoNumbers
 )
 set_target_properties(NSLeetCode PROPERTIES LINKER_LANGUAGE CXX)
 

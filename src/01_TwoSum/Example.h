@@ -7,10 +7,14 @@
 
 #include <vector>
 
+namespace TwoSum {
+
 struct Example {
   std::vector<int> nums;
   int target;
   std::vector<int> expected;
 };
+
+} // TwoSum
 
 #endif //EXAMPLE_H
