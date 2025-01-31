@@ -12,11 +12,11 @@ add_library(02_AddTwoNumbers
         Example.h
         Examples.h
         ListNode.h
-        # Run.h
-        # Run.cpp
+        Run.h
+        Run.cpp
         Solutions/Solution.h
-        # Solutions/First.h
-        # Solutions/First.cpp
+        Solutions/First.h
+        Solutions/First.cpp
 )
 
 target_link_libraries(02_AddTwoNumbers

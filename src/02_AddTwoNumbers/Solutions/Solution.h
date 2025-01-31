@@ -5,6 +5,7 @@
 #ifndef ADDTWONUMBERS_SOLUTION_H
 #define ADDTWONUMBERS_SOLUTION_H
 
+#include <string>
 #include "../ListNode.h"
 
 namespace AddTwoNumbers {
@@ -14,7 +15,7 @@ class Solution {
   public:
     virtual std::string getTitle() = 0;
     virtual std::string getRuntimeComplexity() = 0;
-    virtual std::vector<int> addTwoNumbers(ListNode* l1, ListNode* l2) = 0;
+    virtual ListNode* addTwoNumbers(ListNode* l1, ListNode* l2) = 0;
 };
 
 

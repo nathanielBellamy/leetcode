@@ -14,6 +14,10 @@ int main() {
   TwoSum::Run twoSumRun;
   twoSumRun.run();
 
+  // 02_AddTwoNumbers
+  AddTwoNumbers::Run addTwoNumbersRun;
+  addTwoNumbersRun.run();
+
   std::cout << " == NSLeetCode END ==" << std::endl;
   return 0;
 }

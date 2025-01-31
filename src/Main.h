@@ -13,6 +13,7 @@
 // problems
 #include "./01_TwoSum/Run.h"
 #include "./01_TwoSum/BenchmarkTwoSum.h"
+#include "./02_AddTwoNumbers/Run.h"
 
 #define NSLC_BENCHMARK false
 

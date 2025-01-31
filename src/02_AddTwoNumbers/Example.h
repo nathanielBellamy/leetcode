@@ -9,7 +9,7 @@
 
 namespace AddTwoNumbers {
 
-stuct Example {
+struct Example {
   ListNode* l1;
   ListNode* l2;
   ListNode* expected;

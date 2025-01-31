@@ -34,7 +34,7 @@ struct Examples {
       secondExpected
     };
 
-    ListNode* thirdL1 = new ListNode(9, new ListNode(9, new ListNode(9, new ListNode(9, new ListNode(9, new ListNode(9, new ListNode(9)));
+    ListNode* thirdL1 = new ListNode(9, new ListNode(9, new ListNode(9, new ListNode(9, new ListNode(9, new ListNode(9, new ListNode(9)))))));
     ListNode* thirdL2 = new ListNode(9, new ListNode(9, new ListNode(9, new ListNode(9))));
     ListNode* thirdExpected = new ListNode(8, new ListNode(9, new ListNode(9, new ListNode(9, new ListNode(0, new ListNode(0, new ListNode(0, new ListNode(1))))))));
 
@@ -47,7 +47,7 @@ struct Examples {
     list.push_back(first);
     list.push_back(second);
     list.push_back(third);
-  }
+  };
 };
 
 } // AddTwoNumbers
