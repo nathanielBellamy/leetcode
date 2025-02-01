@@ -28,6 +28,7 @@ void Run::run() {
         std::cout << " == AddTwoNumbers Solution : " << solution->getTitle() << " : " << solution->getRuntimeComplexity() << " == "  << std::endl;
         for (auto example : examples.list) {
           auto actual = solution->addTwoNumbers(example.l1, example.l2);
+//          actual->print();
           if (!actual->equals(example.expected))
             throw std::runtime_error("\n\n AddTwoNumbers Error: Wrong Result \n\n");
           std::cout << "Example SUCCESS" << std::endl;

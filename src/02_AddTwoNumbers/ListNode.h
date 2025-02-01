@@ -5,6 +5,7 @@
 #ifndef LISTNODE_H
 #define LISTNODE_H
 
+#include <iostream>
 namespace AddTwoNumbers {
 
 struct ListNode {
@@ -14,9 +15,15 @@ struct ListNode {
     ListNode(int x) : val(x), next(nullptr) {}
     ListNode(int x, ListNode *next) : val(x), next(next) {}
 
+    void print() const {
+      std::cout << " === " << val << std::endl;
+      if (next != nullptr)
+        next->print();
+    }
+
     // NOTE:
     // - up to the user to start the comparison at the correct nodes
-    bool equals(ListNode *other) {
+    bool equals(ListNode *other) const {
       if (next == nullptr && other->next == nullptr) {
         return val == other->val;
       } else if ( (next == nullptr && other->next != nullptr) || (next != nullptr && other->next == nullptr) ) {

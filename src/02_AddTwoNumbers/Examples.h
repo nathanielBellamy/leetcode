@@ -44,8 +44,8 @@ struct Examples {
       thirdExpected
     };
 
-//    list.push_back(first);
-//    list.push_back(second);
+    list.push_back(first);
+    list.push_back(second);
     list.push_back(third);
   };
 };

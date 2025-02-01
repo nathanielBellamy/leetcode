@@ -11,8 +11,8 @@ int main() {
   std::cout << " == NSLeetCode START ==" << std::endl;
 
   // 01_TwoSum
-  TwoSum::Run twoSumRun;
-  twoSumRun.run();
+//  TwoSum::Run twoSumRun;
+//  twoSumRun.run();
 
   // 02_AddTwoNumbers
   AddTwoNumbers::Run addTwoNumbersRun;
