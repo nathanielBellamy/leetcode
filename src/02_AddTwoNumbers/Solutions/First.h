@@ -5,6 +5,7 @@
 #ifndef ADDTWONUMBERS_SOLUTIONS_FIRST_H
 #define ADDTWONUMBERS_SOLUTIONS_FIRST_H
 
+#include <iostream>
 #include <string>
 #include "Solution.h"
 #include "../ListNode.h"

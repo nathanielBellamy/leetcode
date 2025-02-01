@@ -30,7 +30,7 @@ namespace TwoSum {
     }
 
     int Run::run() {
-        std::cout << " == 01_TwoSum START == " << std::endl;
+      std::cout << " == 01_TwoSum START == " << std::endl;
 
       Examples examples;
 
