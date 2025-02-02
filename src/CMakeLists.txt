@@ -6,11 +6,16 @@ set (CMAKE_CXX_STANDARD_REQUIRED ON)
 
 find_package(benchmark REQUIRED) # google benchmark
 
+set (BASE_DIR /Users/ns/code/leetcode/src)
+
 add_subdirectory(
-        /Users/ns/code/leetcode/src/01_TwoSum
+        ${BASE_DIR}/01_TwoSum
 )
 add_subdirectory(
-        /Users/ns/code/leetcode/src/02_AddTwoNumbers
+        ${BASE_DIR}/02_AddTwoNumbers
+)
+add_subdirectory(
+        ${BASE_DIR}/03_LongestSubstring
 )
 
 add_executable(NSLeetCode
@@ -23,6 +28,7 @@ target_link_libraries(NSLeetCode
     benchmark::benchmark
     01_TwoSum
     02_AddTwoNumbers
+    03_LongestSubstring
 )
 set_target_properties(NSLeetCode PROPERTIES LINKER_LANGUAGE CXX)
 

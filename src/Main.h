@@ -15,6 +15,8 @@
 #include "./01_TwoSum/BenchmarkTwoSum.h"
 #include "./02_AddTwoNumbers/Run.h"
 #include "./02_AddTwoNumbers/BenchmarkAddTwoNumbers.h"
+#include "./03_LongestSubstring/Run.h"
+#include "./03_LongestSubstring/BenchmarkLongestSubstring.h"
 
 #define NSLC_BENCHMARK false
 
