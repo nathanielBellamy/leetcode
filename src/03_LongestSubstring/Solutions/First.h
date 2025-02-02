@@ -6,6 +6,8 @@
 #define LONGESTSUBSTRING_SOLUTIONS_FIRST_H
 
 #include <string>
+#include <unordered_map>
+#include <vector>
 #include "Solution.h"
 
 namespace LongestSubstring {
