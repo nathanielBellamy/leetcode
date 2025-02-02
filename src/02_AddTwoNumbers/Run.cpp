@@ -3,6 +3,7 @@
 //
 
 #include "Run.h"
+#include "Examples.h"
 
 namespace AddTwoNumbers {
 
@@ -12,6 +13,16 @@ Run::Run() : examples(new Examples) {}
 
 Run::~Run() {
   delete examples;
+}
+
+void Run::first() {
+  First first;
+
+  for (auto example : examples->list) {
+    auto actual = first.addTwoNumbers(example.l1, example.l2);
+    if (!actual->equals(example.expected))
+      throw std::runtime_error("\n\n AddTwoNumbers::Solutions::First Error: Wrong Result \n\n");
+  }
 }
 
 void Run::run() {
@@ -40,6 +51,5 @@ void Run::run() {
       std::cout << std::endl << " == 02_AddTwoNumbers SUCCESS == " << std::endl;
       std::cout << " == 02_AddTwoNumbers END == " << std::endl << std::endl;
 }
-
 
 }

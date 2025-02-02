@@ -20,6 +20,7 @@ class Run {
     ~Run();
 
     void run();
+    void first();
 };
 
 } // AddTwoNumbers
