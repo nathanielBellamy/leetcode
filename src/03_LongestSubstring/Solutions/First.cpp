@@ -114,7 +114,7 @@ int First::longestSubstring(std::string s) {
   std::sort(
       longestSubstringWithUniqueInstanceVector.begin(),
       longestSubstringWithUniqueInstanceVector.end(),
-      [](LongestSubstringWithUniqueInstance& a, LongestSubstringWithUniqueInstance& b) { return a.length < b.length; }
+      [](LongestSubstringWithUniqueInstance& a, LongestSubstringWithUniqueInstance& b) { return a.length > b.length; } // sort descending by length
   );
 
   LongestSubstringWithUniqueInstance winner = {};
