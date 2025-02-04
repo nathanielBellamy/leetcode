@@ -11,7 +11,7 @@ namespace LongestSubstring {
 
 struct Example {
   std::string s;
-  std::string expected;
+  int expected;
 };
 
 } // LongestSubstring

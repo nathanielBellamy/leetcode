@@ -14,7 +14,7 @@ class Solution {
   public:
     virtual std::string getTitle() = 0;
     virtual std::string getRuntimeComplexity() = 0;
-    virtual std::string longestSubstring(std::string s) = 0;
+    virtual int longestSubstring(std::string s) = 0;
 };
 
 

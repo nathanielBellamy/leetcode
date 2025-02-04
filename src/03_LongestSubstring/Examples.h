@@ -13,6 +13,32 @@ namespace LongestSubstring {
 struct Examples {
   std::vector<Example> list;
 
+  Examples() : list(std::vector<Example>()) {
+    Example first = {
+      "abcabcbb",
+       3
+    };
+
+    Example second = {
+      "bbbbb",
+      1
+    };
+
+    Example third = {
+      "pwwkew",
+      3
+    };
+
+    Example fourth = {
+      "thelazybrownfox",
+       13
+    };
+
+    list.push_back(first);
+    list.push_back(second);
+    list.push_back(third);
+    list.push_back(fourth);
+  }
 };
 
 } // LongestSubstring
