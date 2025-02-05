@@ -8,6 +8,7 @@
 #include <iostream>
 #include "./Examples.h"
 #include "./Solutions/First.h"
+#include "./Solutions/Second.h"
 
 namespace LongestSubstring {
 

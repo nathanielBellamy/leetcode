@@ -30,10 +30,11 @@ void Run::first() {
 void Run::run() {
   std::cout << std::endl << " == 03_LongestSubstring Start == " << std::endl << std::endl;
 
-      First* first = new First;
+//      First* first = new First;
+      Second* second = new Second;
 
       std::vector<Solution*> solutions;
-      solutions.push_back(first);
+      solutions.push_back(second);
 
       for (auto solution : solutions) {
         std::cout << " == LongestSubstring Solution : " << solution->getTitle() << " : " << solution->getRuntimeComplexity() << " == "  << std::endl;

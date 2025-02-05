@@ -1,9 +1,9 @@
 //
-// Created by ns on 2/01/25.
+// Created by ns on 2/5/25.
 //
 
-#ifndef LONGESTSUBSTRING_SOLUTIONS_FIRST_H
-#define LONGESTSUBSTRING_SOLUTIONS_FIRST_H
+#ifndef LONGESTSUBSTRING_SOLUTIONS_SECOND_H
+#define LONGESTSUBSTRING_SOLUTIONS_SECOND_H
 
 #include <iostream>
 #include <string>
@@ -15,12 +15,11 @@
 namespace LongestSubstring {
 namespace Solutions {
 
-class First : public Solution {
+class Second : public Solution {
   public:
     std::string getTitle() override;
     std::string getRuntimeComplexity() override;
     int longestSubstring(std::string s) override;
-
 };
 
 }  // Solutions
@@ -28,4 +27,4 @@ class First : public Solution {
 
 
 
-#endif //LONGESTSUBSTRING_SOLUTIONS_FIRST_H
+#endif //LONGESTSUBSTRING_SOLUTIONS_SECOND_H

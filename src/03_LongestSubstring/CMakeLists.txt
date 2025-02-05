@@ -16,6 +16,8 @@ add_library(03_LongestSubstring
         Solutions/Solution.h
         Solutions/First.h
         Solutions/First.cpp
+        Solutions/Second.h
+        Solutions/Second.cpp
 )
 
 target_link_libraries(03_LongestSubstring
