@@ -17,6 +17,7 @@ std::string First::getRuntimeComplexity() {
 };
 
 int First::longestSubstring(std::string s) {
+  std::cout << "=== s === " << s << std::endl << std::endl;
   const int sLength = s.length();
   if (sLength <= 1) {
     return sLength;
@@ -36,7 +37,6 @@ int First::longestSubstring(std::string s) {
     if (charIndexMap.find(c) == charIndexMap.end()) {
       // first instance of c in s
       auto vec = std::vector<int>();
-      vec.push_back(0);
       vec.push_back(i);
       charIndexMap.insert( { c, vec } );
     } else {
@@ -72,18 +72,18 @@ int First::longestSubstring(std::string s) {
   int charCount = 0;
   for (auto kv : charIndexMap) {
     charCount++;
-    std::cout << " char freq " << std::endl;
     auto instanceCount = kv.second.size(); // count indicies of c appearing in s
+    std::cout << " == instance count == " << kv.first << " : " << instanceCount << std::endl << std::endl;
     if (instanceCount > highestFrequency) {
       highestFrequency = instanceCount;
     }
   }
   if (charCount < 2) {
-    std::cout << " charCount result" << charCount << std::endl;
+    std::cout << " === char count result === " << charCount << std::endl;
     return charCount;
   }
   if (highestFrequency == 1) {
-    std::cout << " freq result " << s.length() << std::endl;
+    std::cout << " === freq result === " << s.length() << std::endl;
     // all characters appeared at most once
     return s.length();
   }
@@ -103,12 +103,10 @@ int First::longestSubstring(std::string s) {
         charIndexMap[c].back(), tailLength, std::pair<int, int>(startIndex, endIndex)
       };
     }
+    std::cout << " == clswui == " << c << " : len-> " << charLongestSubstringWithUniqueInstanceMap[c].length << " : si-> " << charLongestSubstringWithUniqueInstanceMap[c].indexBoundsInclusive.first << " : ei-> " << charLongestSubstringWithUniqueInstanceMap[c].indexBoundsInclusive.second << std::endl  << std::endl;
     longestSubstringWithUniqueInstanceVector.push_back(charLongestSubstringWithUniqueInstanceMap[c]);
   }
 
-  bool sortFunc(LongestSubstringWithUniqueInstance& a, LongestSubstringWithUniqueInstance& b) {
-    return a.length < b.length;
-  }
 
   // sort vector by length
   std::sort(

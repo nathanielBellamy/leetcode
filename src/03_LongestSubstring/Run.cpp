@@ -40,10 +40,10 @@ void Run::run() {
         for (auto example : examples->list) {
           auto actual = solution->longestSubstring(example.s);
           if (actual != example.expected) {
-            std::cout << " WRONG " << example.expected << " : " << actual << std::endl;
+            std::cout << " == WRONG == " << example.expected << " : " << actual << std::endl << std::endl;
           } else {
 //            throw std::runtime_error("\n\n LongestSubstring Error: Wrong Result \n\n");
-            std::cout << "Example SUCCESS" << std::endl;
+            std::cout << " == Example SUCCESS == " << example.expected << " : " << actual << std::endl << std::endl;
           }
         }
       }
