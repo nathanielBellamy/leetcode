@@ -49,7 +49,7 @@ void Run::run() {
         }
       }
 
-      delete first;
+      delete second;
       delete examples;
 
       std::cout << std::endl << " == 03_LongestSubstring SUCCESS == " << std::endl;
