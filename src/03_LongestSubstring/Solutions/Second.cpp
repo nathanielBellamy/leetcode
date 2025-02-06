@@ -17,30 +17,48 @@ std::string Second::getRuntimeComplexity() {
 };
 
 int Second::longestSubstring(std::string s) {
+//  std::cout << s << std::endl;
   const int sLength = s.length();
   if (sLength <= 1)
     return sLength;
 
-  std::unordered_map<char, int> charMap = {};
-
   int longestSubstrLength = 1;
+  std::unordered_map<char, int> charMap = {};
   std::pair<int, int> boundsInclusive = {0, 0};
+  std::pair<int, int> longestBounds = {0, 0};
   // abcabcbb
+  // aaaabaaabbbbabbbb
   for (int i = 0; i < sLength; i++) {
       char c = s[i];
-      if (charMap.find(c) == charMap.end()) {
-        // first time seing car within bounds
-        boundsInclusive.second = i;
-      } else {
-        // collapse current bounds
+      boundsInclusive.second = i;
+      if (charMap.find(c) != charMap.end()) {
+        // shift bounds to not include previous instance
         boundsInclusive.first = charMap[c] + 1;
+        if (charMap[c] == i - 1) {
+          // two of the same characters in a row
+          // collapse current bounds
+          boundsInclusive.first = i;
+          boundsInclusive.second = i;
+        }
+        // recompute charMap
+        charMap.clear();
+        for (int k = boundsInclusive.first; k <= boundsInclusive.second; k++) {
+          char x = s[k];
+          charMap.insert({x, k});
+        }
       }
       charMap[c] = i;
       int boundsLength = boundsInclusive.second - boundsInclusive.first + 1;
+//      std::cout << " == c bounds == " << c << " : " << i << " : " << boundsInclusive.first << " : " << boundsInclusive.second << std::endl;
       if (boundsLength > longestSubstrLength) {
         longestSubstrLength = boundsLength;
+        longestBounds.first = boundsInclusive.first;
+        longestBounds.second = boundsInclusive.second;
       }
+//      std::cout << " === bi === " << boundsInclusive.first << " " << boundsInclusive.second << std::endl << std::endl;
   }
+
+  std::cout << " == longest bounds == " << longestBounds.first << " : " << longestBounds.second << std::endl;
 
   return longestSubstrLength;
 };
