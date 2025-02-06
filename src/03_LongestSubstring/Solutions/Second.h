@@ -5,7 +5,6 @@
 #ifndef LONGESTSUBSTRING_SOLUTIONS_SECOND_H
 #define LONGESTSUBSTRING_SOLUTIONS_SECOND_H
 
-#include <iostream>
 #include <string>
 #include <unordered_map>
 #include <vector>

@@ -17,7 +17,6 @@ std::string Second::getRuntimeComplexity() {
 };
 
 int Second::longestSubstring(std::string s) {
-//  std::cout << s << std::endl;
   const int sLength = s.length();
   if (sLength <= 1)
     return sLength;
@@ -26,8 +25,6 @@ int Second::longestSubstring(std::string s) {
   std::unordered_map<char, int> charMap = {};
   std::pair<int, int> boundsInclusive = {0, 0};
   std::pair<int, int> longestBounds = {0, 0};
-  // abcabcbb
-  // aaaabaaabbbbabbbb
   for (int i = 0; i < sLength; i++) {
       char c = s[i];
       boundsInclusive.second = i;
@@ -49,16 +46,12 @@ int Second::longestSubstring(std::string s) {
       }
       charMap[c] = i;
       int boundsLength = boundsInclusive.second - boundsInclusive.first + 1;
-//      std::cout << " == c bounds == " << c << " : " << i << " : " << boundsInclusive.first << " : " << boundsInclusive.second << std::endl;
       if (boundsLength > longestSubstrLength) {
         longestSubstrLength = boundsLength;
         longestBounds.first = boundsInclusive.first;
         longestBounds.second = boundsInclusive.second;
       }
-//      std::cout << " === bi === " << boundsInclusive.first << " " << boundsInclusive.second << std::endl << std::endl;
   }
-
-  std::cout << " == longest bounds == " << longestBounds.first << " : " << longestBounds.second << std::endl;
 
   return longestSubstrLength;
 };
