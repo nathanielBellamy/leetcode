@@ -6,10 +6,8 @@
 #define MEDIANOFTWOSORTEDARRAYS_SOLUTIONS_FIRST_H
 
 #include <iostream>
-#include <string>
-#include <unordered_map>
 #include <vector>
-#include <tuple>
+#include <cmath>
 #include "Solution.h"
 
 namespace MedianOfTwoSortedArrays {
@@ -19,7 +17,7 @@ class First : public Solution {
   public:
     std::string getTitle() override;
     std::string getRuntimeComplexity() override;
-    int longestSubstring(std::string s) override;
+    double findMedianSortedArrays(std::vector<int>& nums1, std::vector<int>& nums2) override;
 
 };
 

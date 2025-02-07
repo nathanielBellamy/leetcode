@@ -16,8 +16,6 @@ add_library(04_MedianOfTwoSortedArrays
         Solutions/Solution.h
         Solutions/First.h
         Solutions/First.cpp
-        Solutions/Second.h
-        Solutions/Second.cpp
 )
 
 target_link_libraries(04_MedianOfTwoSortedArrays

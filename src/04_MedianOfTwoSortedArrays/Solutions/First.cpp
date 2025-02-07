@@ -13,56 +13,78 @@ std::string First::getTitle() {
 };
 
 std::string First::getRuntimeComplexity() {
-  return "TBD - but too slow anyway";
+  return "TBD";
 };
 
-int First::longestSubstring(std::string s) {
-  const int sLength = s.length();
-  if (sLength <= 1)
-    return sLength;
+double First::findMedianSortedArrays(std::vector<int>& nums1, std::vector<int>& nums2) {
 
-  std::unordered_map<char, std::vector<int>> charIndexMap = {};
+  std::vector<int> mergedVec;
+  int nums1Size = nums1.size();
+  int nums2Size = nums2.size();
 
-  // create char index map
-  for (int i = 0; i < s.length(); i++) {
-    char c = s[i];
-    if (charIndexMap.find(c) == charIndexMap.end()) {
-      // first instance of c in s
-      auto vec = std::vector<int>();
-      vec.push_back(i);
-      charIndexMap.insert( { c, vec } );
-    } else {
-      // not first instance of c in s
-      charIndexMap[c].push_back(i);
-    }
-  }
+//  int largerVecSize;
+//  int largerVecNum;
+//  std::vector<int> largerVec;
+//  std::vector<int> smallerVec;
+//  if (nums1Size > nums2Size) {
+//    largerVec = nums1;
+//    smallerVec = nums2;
+//    largerVecSize = nums1Size;
+//  } else {
+//    largerVec = nums2;
+//    smallerVec = nums1;
+//    largerVecSize = nums2Size;
+//  }
 
+  int numsOneIndex = 0;
+  int numsTwoIndex = 0;
+  bool nums1End = false;
+  bool nums2End = false;
 
-  std::unordered_map<char, bool> charMap = {};
-  std::pair<int, int> indexBoundsInclusive;
-  for (int i = sLength - 1; i > 0; i--) {
-    for (int j = 0; j < sLength - i; j++) {
-      charMap.clear();
-      indexBoundsInclusive.first = j;
-      indexBoundsInclusive.second = j + i;
-
-      bool highestFreqIsOne = true;
-      for (int k = indexBoundsInclusive.first; k < indexBoundsInclusive.second + 1; k++) {
-        char c = s[k];
-        if (charMap.find(c) == charMap.end()) {
-          charMap[c] = true;
-        } else {
-          highestFreqIsOne = false;
-          break;
-        }
+  while (!nums1End || !nums2End) {
+    if (!nums1End && !nums2End) {
+      int num1 = nums1[numsOneIndex];
+      int num2 = nums2[numsTwoIndex];
+      if (num1 < num2) {
+        mergedVec.push_back(num1);
+        numsOneIndex++;
+      } else if (num1 > num2) {
+        mergedVec.push_back(num2);
+        numsTwoIndex++;
+      } else { // equal
+        mergedVec.push_back(num1);
+        mergedVec.push_back(num2);
+        numsOneIndex++;
+        numsTwoIndex++;
       }
+    } else if (nums1End) {
+      mergedVec.push_back( nums2[numsTwoIndex] );
+      numsTwoIndex++;
+    } else if (nums2End) {
+      mergedVec.push_back( nums1[numsOneIndex] );
+      numsOneIndex++;
+    }
 
-      if (highestFreqIsOne)
-        return i + 1;
+    if (numsOneIndex == nums1Size) {
+      nums1End = true;
+    }
+
+    if (numsTwoIndex == nums2Size) {
+      nums2End = true;
     }
   }
 
-  return 1;
+  double result;
+  int mergedSize = mergedVec.size();
+  if (mergedSize % 2 == 0) {
+     int idx = mergedSize / 2;
+     result = (mergedVec[idx] + mergedVec[idx - 1]) / 2.0;
+  } else {
+    int idx = std::ceil(mergedSize / 2);
+    result = mergedVec[idx];
+  }
+
+  return result;
 };
 
 } // Solutions

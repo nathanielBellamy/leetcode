@@ -18,9 +18,13 @@ int main() {
 //  AddTwoNumbers::Run addTwoNumbersRun;
 //  addTwoNumbersRun.run();
 
-  // 03_LongestSubstring
-  LongestSubstring::Run longestSubstringRun;
-  longestSubstringRun.run();
+//  // 03_LongestSubstring
+//  LongestSubstring::Run longestSubstringRun;
+//  longestSubstringRun.run();
+
+  // 04_MedianOfTwoSortedArrays
+  MedianOfTwoSortedArrays::Run medianOfTwoSortedArraysRun;
+  medianOfTwoSortedArraysRun.run();
 
   std::cout << " == NSLeetCode END ==" << std::endl;
   return 0;

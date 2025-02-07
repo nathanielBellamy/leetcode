@@ -19,7 +19,7 @@ void Run::first() {
   First first;
 
   for (auto example : examples->list) {
-    auto actual = first.longestSubstring(example.s);
+    auto actual = first.findMedianSortedArrays(example.nums1, example.nums2);
     if (actual != example.expected)
       throw std::runtime_error("\n\n MedianOfTwoSortedArrays::Solutions::First Error: Wrong Result \n\n");
   }
@@ -30,18 +30,17 @@ void Run::first() {
 void Run::run() {
   std::cout << std::endl << " == 03_MedianOfTwoSortedArrays Start == " << std::endl << std::endl;
 
-//      First* first = new First;
-      Second* second = new Second;
+      First* first = new First;
 
       std::vector<Solution*> solutions;
-      solutions.push_back(second);
+      solutions.push_back(first);
 
       for (auto solution : solutions) {
         std::cout << " == MedianOfTwoSortedArrays Solution : " << solution->getTitle() << " : " << solution->getRuntimeComplexity() << " == "  << std::endl;
         for (auto example : examples->list) {
-          auto actual = solution->longestSubstring(example.s);
+          auto actual = solution->findMedianSortedArrays(example.nums1, example.nums2);
           if (actual != example.expected) {
-            std::cout << " == WRONG == " << example.expected << " : " << actual << std::endl << std::endl;
+            std::cout << " == WRONG == expected : " << example.expected << " : actual : " << actual << std::endl << std::endl;
           } else {
 //            throw std::runtime_error("\n\n MedianOfTwoSortedArrays Error: Wrong Result \n\n");
             std::cout << " == Example SUCCESS == " << example.expected << " : " << actual << std::endl << std::endl;
@@ -49,7 +48,7 @@ void Run::run() {
         }
       }
 
-      delete second;
+      delete first;
       delete examples;
 
       std::cout << std::endl << " == 03_MedianOfTwoSortedArrays SUCCESS == " << std::endl;

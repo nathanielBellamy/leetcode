@@ -5,15 +5,16 @@
 #ifndef MEDIANOFTWOSORTEDARRAYS_EXAMPLE_H
 #define MEDIANOFTWOSORTEDARRAYS_EXAMPLE_H
 
-#include <string>
+#include <vector>
 
-namespace LongestSubstring {
+namespace MedianOfTwoSortedArrays {
 
 struct Example {
-  std::string s;
-  int expected;
+  std::vector<int> nums1;
+  std::vector<int> nums2;
+  float expected;
 };
 
-} // LongestSubstring
+} // MedianOfTwoSortedArrays
 
 #endif //MEDIANOFTWOSORTEDARRAYS_EXAMPLE_H

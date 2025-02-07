@@ -17,6 +17,7 @@
 #include "./02_AddTwoNumbers/BenchmarkAddTwoNumbers.h"
 #include "./03_LongestSubstring/Run.h"
 #include "./03_LongestSubstring/BenchmarkLongestSubstring.h"
+#include "./04_MedianOfTwoSortedArrays/Run.h"
 
 #define NSLC_BENCHMARK false
 
