@@ -17,24 +17,10 @@ std::string First::getRuntimeComplexity() {
 };
 
 double First::findMedianSortedArrays(std::vector<int>& nums1, std::vector<int>& nums2) {
-
+  // TODO: handle empty vecs
   std::vector<int> mergedVec;
   int nums1Size = nums1.size();
   int nums2Size = nums2.size();
-
-//  int largerVecSize;
-//  int largerVecNum;
-//  std::vector<int> largerVec;
-//  std::vector<int> smallerVec;
-//  if (nums1Size > nums2Size) {
-//    largerVec = nums1;
-//    smallerVec = nums2;
-//    largerVecSize = nums1Size;
-//  } else {
-//    largerVec = nums2;
-//    smallerVec = nums1;
-//    largerVecSize = nums2Size;
-//  }
 
   int numsOneIndex = 0;
   int numsTwoIndex = 0;
