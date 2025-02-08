@@ -21,6 +21,7 @@ class Run {
 
     void run();
     void first();
+    void second();
 };
 
 } // LongestSubstring

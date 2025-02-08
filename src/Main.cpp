@@ -11,20 +11,22 @@ int main() {
   std::cout << " == NSLeetCode START ==" << std::endl;
 
   // 01_TwoSum
-//  TwoSum::Run twoSumRun;
-//  twoSumRun.run();
+  TwoSum::Run twoSumRun;
+  twoSumRun.run();
 
   // 02_AddTwoNumbers
-//  AddTwoNumbers::Run addTwoNumbersRun;
-//  addTwoNumbersRun.run();
+  AddTwoNumbers::Run addTwoNumbersRun;
+  addTwoNumbersRun.run();
 
 //  // 03_LongestSubstring
-//  LongestSubstring::Run longestSubstringRun;
-//  longestSubstringRun.run();
+  LongestSubstring::Run* longestSubstringRun = new LongestSubstring::Run();
+  longestSubstringRun->run();
+  delete longestSubstringRun;
 
   // 04_MedianOfTwoSortedArrays
-  MedianOfTwoSortedArrays::Run medianOfTwoSortedArraysRun;
-  medianOfTwoSortedArraysRun.run();
+  MedianOfTwoSortedArrays::Run* medianOfTwoSortedArraysRun = new MedianOfTwoSortedArrays::Run();
+  medianOfTwoSortedArraysRun->run();
+  delete medianOfTwoSortedArraysRun;
 
   std::cout << " == NSLeetCode END ==" << std::endl;
   return 0;

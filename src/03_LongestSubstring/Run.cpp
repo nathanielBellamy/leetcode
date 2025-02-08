@@ -16,15 +16,27 @@ Run::~Run() {
 }
 
 void Run::first() {
-  First first;
+  First* first = new First();
 
   for (auto example : examples->list) {
-    auto actual = first.longestSubstring(example.s);
+    auto actual = first->longestSubstring(example.s);
     if (actual != example.expected)
       throw std::runtime_error("\n\n LongestSubstring::Solutions::First Error: Wrong Result \n\n");
   }
 
-  delete examples;
+  delete first;
+}
+
+void Run::second() {
+  Second* second = new Second();
+
+  for (auto example : examples->list) {
+    auto actual = second->longestSubstring(example.s);
+    if (actual != example.expected)
+      throw std::runtime_error("\n\n LongestSubstring::Solutions::First Error: Wrong Result \n\n");
+  }
+
+  delete second;
 }
 
 void Run::run() {
@@ -41,16 +53,14 @@ void Run::run() {
         for (auto example : examples->list) {
           auto actual = solution->longestSubstring(example.s);
           if (actual != example.expected) {
-            std::cout << " == WRONG == " << example.expected << " : " << actual << std::endl << std::endl;
+            throw std::runtime_error("\n\n LongestSubstring Error: Wrong Result \n\n");
           } else {
-//            throw std::runtime_error("\n\n LongestSubstring Error: Wrong Result \n\n");
             std::cout << " == Example SUCCESS == " << example.expected << " : " << actual << std::endl << std::endl;
           }
         }
       }
 
       delete second;
-      delete examples;
 
       std::cout << std::endl << " == 03_LongestSubstring SUCCESS == " << std::endl;
       std::cout << " == 03_LongestSubstring END == " << std::endl << std::endl;

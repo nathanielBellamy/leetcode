@@ -13,11 +13,16 @@ std::string First::getTitle() {
 };
 
 std::string First::getRuntimeComplexity() {
-  return "TBD";
+  // TODO:
+  // - a constraint on this problem is O(log(m+n))
+  // - but this passed the leetcode submit with 3ms runtime so...maybe it is?
+  // - so far, the leetcode runtime and the results from local benchmarking
+  //   have been pretty different
+  // - TODO: MedianOfTwoSortedArrays::Solutions::Second
+  return "O(m+n)";
 };
 
 double First::findMedianSortedArrays(std::vector<int>& nums1, std::vector<int>& nums2) {
-  // TODO: handle empty vecs
   std::vector<int> mergedVec;
   int nums1Size = nums1.size();
   int nums2Size = nums2.size();
@@ -26,6 +31,11 @@ double First::findMedianSortedArrays(std::vector<int>& nums1, std::vector<int>& 
   int numsTwoIndex = 0;
   bool nums1End = false;
   bool nums2End = false;
+
+  if (nums1Size == 0)
+    nums1End = true;
+  if (nums2Size == 0)
+    nums2End = true;
 
   while (!nums1End || !nums2End) {
     if (!nums1End && !nums2End) {
@@ -60,8 +70,11 @@ double First::findMedianSortedArrays(std::vector<int>& nums1, std::vector<int>& 
     }
   }
 
-  double result;
   int mergedSize = mergedVec.size();
+  if (mergedSize == 0)
+    return 0.0;
+
+  double result;
   if (mergedSize % 2 == 0) {
      int idx = mergedSize / 2;
      result = (mergedVec[idx] + mergedVec[idx - 1]) / 2.0;

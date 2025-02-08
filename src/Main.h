@@ -12,12 +12,13 @@
 
 // problems
 #include "./01_TwoSum/Run.h"
-#include "./01_TwoSum/BenchmarkTwoSum.h"
+#include "./01_TwoSum/Benchmark.h"
 #include "./02_AddTwoNumbers/Run.h"
-#include "./02_AddTwoNumbers/BenchmarkAddTwoNumbers.h"
+#include "./02_AddTwoNumbers/Benchmark.h"
 #include "./03_LongestSubstring/Run.h"
-#include "./03_LongestSubstring/BenchmarkLongestSubstring.h"
+#include "./03_LongestSubstring/Benchmark.h"
 #include "./04_MedianOfTwoSortedArrays/Run.h"
+#include "./04_MedianOfTwoSortedArrays/Benchmark.h"
 
 #define NSLC_BENCHMARK false
 

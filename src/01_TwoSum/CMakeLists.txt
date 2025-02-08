@@ -8,7 +8,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 find_package(benchmark REQUIRED) # google benchmark
 
 add_library(01_TwoSum
-    BenchmarkTwoSum.h
+    Benchmark.h
     Example.h
     Examples.h
     Run.h

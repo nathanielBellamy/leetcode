@@ -8,13 +8,14 @@
 #include <benchmark/benchmark.h>
 #include "Run.h"
 
-static void BM_02_MedianOfTwoSortedArrays_First(benchmark::State& state) {
-  MedianOfTwoSortedArrays::Run run;
+static void BM_04_MedianOfTwoSortedArrays_First(benchmark::State& state) {
+  MedianOfTwoSortedArrays::Run* run = new MedianOfTwoSortedArrays::Run();
   for (auto _ : state) {
-    run.first();
+    run->first();
   }
+  delete run;
 }
 
-BENCHMARK(BM_02_MedianOfTwoSortedArrays_First);
+BENCHMARK(BM_04_MedianOfTwoSortedArrays_First);
 
 #endif //BENCHMARKMEDIANOFTWOSORTEDARRAYS_H
