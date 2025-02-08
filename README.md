@@ -8,7 +8,6 @@
 ### Benchmarks
 - To run benchmarks, flip the `NSLC_BENCHMARK` flag to `true` in `main.h`
 
-
 ### Why
 
 - "You know what the best way to learn code is? Reading code." - Brian Basor
@@ -17,4 +16,4 @@
 - "The desk drawer is your best editor." - Tess Gallagher
 	- give myself something to work on while taking a break from GrooveJr
 
-- Create for myself excuses to use and learn
+- Create for myself excuses to use and to learn C++.
