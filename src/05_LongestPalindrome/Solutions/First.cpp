@@ -31,14 +31,16 @@ std::string First::longestPalindrome(std::string s) {
   auto isPalindrome = [](std::string& str) {
     int len = str.length();
     int bound;
-    if (len % 2 == 0) {
+    if (len == 2) {
+      return str[0] == str[1];
+    } else if (len % 2 == 0) {
       bound = len / 2;
     } else {
       bound = (len - 1) / 2;
     }
     bool isPalindrome = true;
     for (int i = 0; i < bound; i++) {
-      int compliment = len - i;
+      int compliment = len - i - 1;
       if (str[i] != str[compliment]) {
         isPalindrome = false;
         break;
@@ -48,24 +50,31 @@ std::string First::longestPalindrome(std::string s) {
   };
 
   // can assume sLength > 2
-  std::string candidate = std::string(1, s[0]);
-  int candidateLength = 1;
+  int resultLength = 0;
   bool previousCheckWasPalindrome = false;
   std::unordered_map<char, std::vector<int>> charIndexMap;
-  charIndexMap.insert(std::make_pair(s[0], std::vector<int>(0)));
-  for (int i = 1; i < sLength; i++) {
+  for (int i = 0; i < sLength; i++) {
     char c = s[i];
     if (charIndexMap.find(c) == charIndexMap.end()) {
       // first occurence of letter
       // cannot be the end of a newly found palindrome of length > 1
-      charIndexMap.insert(std::make_pair(c, std::vector<int>(i)));
+//      charIndexMap.insert( { c, std::vector<int>(i) } );
+      if (resultLength == 0) {
+        result = s.substr(i, 1);
+        resultLength = 1;
+      }
     } else {
-      // TODO
+      for (auto idx : charIndexMap[c]) {
+        int substrLength = i - idx + 1;
+        std::string subStr = s.substr(idx, substrLength);
+        if (isPalindrome(subStr) == 1 && substrLength > resultLength) {
+        	result = subStr;
+            resultLength = substrLength;
+            break;
+        }
+      }
     }
-    std::string intermediate = ;
-    if (isPalindrome(intermediate)) {
-
-    }
+    charIndexMap[c].push_back(i);
   }
 
 
