@@ -19,6 +19,8 @@
 #include "./03_LongestSubstring/Benchmark.h"
 #include "./04_MedianOfTwoSortedArrays/Run.h"
 #include "./04_MedianOfTwoSortedArrays/Benchmark.h"
+#include "./05_LongestPalindrome/Run.h"
+#include "./05_LongestPalindrome/Benchmark.h"
 
 #define NSLC_BENCHMARK false
 

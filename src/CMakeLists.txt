@@ -20,6 +20,9 @@ add_subdirectory(
 add_subdirectory(
         ${BASE_DIR}/04_MedianOfTwoSortedArrays
 )
+add_subdirectory(
+        ${BASE_DIR}/05_LongestPalindrome
+)
 
 add_executable(NSLeetCode
         Main.h
@@ -33,6 +36,7 @@ target_link_libraries(NSLeetCode
     02_AddTwoNumbers
     03_LongestSubstring
     04_MedianOfTwoSortedArrays
+    05_LongestPalindrome
 )
 set_target_properties(NSLeetCode PROPERTIES LINKER_LANGUAGE CXX)
 

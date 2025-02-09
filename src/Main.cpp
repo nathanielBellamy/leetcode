@@ -11,22 +11,26 @@ int main() {
   std::cout << " == NSLeetCode START ==" << std::endl;
 
   // 01_TwoSum
-  TwoSum::Run twoSumRun;
-  twoSumRun.run();
+//  TwoSum::Run twoSumRun;
+//  twoSumRun.run();
 
   // 02_AddTwoNumbers
-  AddTwoNumbers::Run addTwoNumbersRun;
-  addTwoNumbersRun.run();
+//  AddTwoNumbers::Run addTwoNumbersRun;
+//  addTwoNumbersRun.run();
 
-//  // 03_LongestSubstring
-  LongestSubstring::Run* longestSubstringRun = new LongestSubstring::Run();
-  longestSubstringRun->run();
-  delete longestSubstringRun;
+    // 03_LongestSubstring
+//  LongestSubstring::Run* RunlongestSubstringRun = new LongestSubstring::Run();
+//  longestSubstringRun->run();
+//  delete longestSubstringRun;
 
   // 04_MedianOfTwoSortedArrays
-  MedianOfTwoSortedArrays::Run* medianOfTwoSortedArraysRun = new MedianOfTwoSortedArrays::Run();
-  medianOfTwoSortedArraysRun->run();
-  delete medianOfTwoSortedArraysRun;
+//  MedianOfTwoSortedArrays::Run* medianOfTwoSortedArraysRun = new MedianOfTwoSortedArrays::Run();
+//  medianOfTwoSortedArraysRun->run();
+//  delete medianOfTwoSortedArraysRun;
+
+  // 05_LongestPalindrome
+  LongestPalindrome::Run* longestPalindromeRun = new LongestPalindrome::Run();
+  longestPalindromeRun->run();
 
   std::cout << " == NSLeetCode END ==" << std::endl;
   return 0;
