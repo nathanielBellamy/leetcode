@@ -29,9 +29,15 @@ struct Examples {
       "racecar"
     };
 
+    Example fourth = {
+      "aaabbbbaa",
+      "bbbb"
+    };
+
     list.push_back(first);
     list.push_back(second);
     list.push_back(third);
+    list.push_back(fourth);
   }
 };
 

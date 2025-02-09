@@ -6,8 +6,10 @@
 #define LONGESTPALINDROME_SOLUTIONS_FIRST_H
 
 #include <iostream>
+#include <string>
+#include <unordered_map>
+#include <tuple>
 #include <vector>
-#include <cmath>
 #include "Solution.h"
 
 namespace LongestPalindrome {
