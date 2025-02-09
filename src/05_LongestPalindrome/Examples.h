@@ -31,7 +31,7 @@ struct Examples {
 
     Example fourth = {
       "aaabbbbaa",
-      "bbbb"
+      "aabbbbaa"
     };
 
     list.push_back(first);
