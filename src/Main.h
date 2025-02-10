@@ -21,6 +21,8 @@
 #include "./04_MedianOfTwoSortedArrays/Benchmark.h"
 #include "./05_LongestPalindrome/Run.h"
 #include "./05_LongestPalindrome/Benchmark.h"
+#include "./06_ZigZagConversion/Run.h"
+#include "./06_ZigZagConversion/Benchmark.h"
 
 #define NSLC_BENCHMARK false
 

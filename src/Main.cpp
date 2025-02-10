@@ -29,8 +29,14 @@ int main() {
 //  delete medianOfTwoSortedArraysRun;
 
   // 05_LongestPalindrome
-  LongestPalindrome::Run* longestPalindromeRun = new LongestPalindrome::Run();
-  longestPalindromeRun->run();
+//  LongestPalindrome::Run* longestPalindromeRun = new LongestPalindrome::Run();
+//  longestPalindromeRun->run();
+//  delete longestPalindromeRun;
+
+  // 06_ZigZagConversion
+  ZigZagConversion::Run* zigZagConversionRun = new ZigZagConversion::Run();
+  zigZagConversionRun->run();
+  delete zigZagConversionRun;
 
   std::cout << " == NSLeetCode END ==" << std::endl;
   return 0;
