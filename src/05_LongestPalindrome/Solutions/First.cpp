@@ -58,7 +58,6 @@ std::string First::longestPalindrome(std::string s) {
     if (charIndexMap.find(c) == charIndexMap.end()) {
       // first occurence of letter
       // cannot be the end of a newly found palindrome of length > 1
-//      charIndexMap.insert( { c, std::vector<int>(i) } );
       if (resultLength == 0) {
         result = s.substr(i, 1);
         resultLength = 1;
