@@ -17,3 +17,5 @@
 	- give myself something to work on while taking a break from GrooveJr
 
 - Create for myself excuses to use and to learn more C++.
+
+- It's more fun than Wordle (no shade).
