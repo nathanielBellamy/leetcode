@@ -32,9 +32,37 @@ struct Examples {
       "A"
     };
 
+    Example fourth = {
+      "ABCDEF",
+      2,
+      "ACEBDF"
+    };
+
+    Example fifth = {
+      "PAYPALISHIRING",
+      2,
+      "PYAIHRNAPLSIIG"
+    };
+
+    Example sixth = {
+      "AB",
+      3,
+      "AB"
+    };
+
+    Example seventh = {
+      "ABC",
+      2,
+      "ACB",
+    };
+
     list.push_back(first);
     list.push_back(second);
     list.push_back(third);
+    list.push_back(fourth);
+    list.push_back(fifth);
+    list.push_back(sixth);
+    list.push_back(seventh);
   }
 };
 

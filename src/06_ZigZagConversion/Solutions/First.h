@@ -5,6 +5,7 @@
 #ifndef ZIGZAGCONVERSION_SOLUTIONS_FIRST_H
 #define ZIGZAGCONVERSION_SOLUTIONS_FIRST_H
 
+#include <cmath>
 #include <string>
 #include <vector>
 #include "Solution.h"
