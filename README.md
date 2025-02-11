@@ -16,4 +16,4 @@
 - "The desk drawer is your best editor." - Tess Gallagher
 	- give myself something to work on while taking a break from GrooveJr
 
-- Create for myself excuses to use and to learn C++.
+- Create for myself excuses to use and to learn more C++.
