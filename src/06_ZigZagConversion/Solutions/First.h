@@ -5,10 +5,7 @@
 #ifndef ZIGZAGCONVERSION_SOLUTIONS_FIRST_H
 #define ZIGZAGCONVERSION_SOLUTIONS_FIRST_H
 
-#include <iostream>
 #include <string>
-#include <unordered_map>
-#include <tuple>
 #include <vector>
 #include "Solution.h"
 
