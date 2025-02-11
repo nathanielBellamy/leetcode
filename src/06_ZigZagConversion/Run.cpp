@@ -19,7 +19,7 @@ void Run::first() {
   First* first = new First();
 
   for (auto example : examples->list) {
-    auto actual = first->zigZagConversione(example.s);
+    auto actual = first->convert(example.s, example.numRows);
     if (actual != example.expected)
       throw std::runtime_error("\n\n ZigZagConversion::Solutions::First Error: Wrong Result \n\n");
   }
@@ -38,7 +38,7 @@ void Run::run() {
       for (auto solution : solutions) {
         std::cout << " == ZigZagConversion Solution : " << solution->getTitle() << " : " << solution->getRuntimeComplexity() << " == "  << std::endl;
         for (auto example : examples->list) {
-          auto actual = solution->zigZagConversione(example.s);
+          auto actual = solution->convert(example.s, example.numRows);
           if (actual != example.expected) {
             std::cout << " == WRONG == expected : " << example.expected << " : actual : " << actual << std::endl << std::endl;
           } else {

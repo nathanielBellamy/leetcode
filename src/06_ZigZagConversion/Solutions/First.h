@@ -19,7 +19,7 @@ class First : public Solution {
   public:
     std::string getTitle() override;
     std::string getRuntimeComplexity() override;
-    std::string zigZagConversione(std::string s) override;
+    std::string convert(std::string s, int numRows) override;
 
 };
 

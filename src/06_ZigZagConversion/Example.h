@@ -11,6 +11,7 @@ namespace ZigZagConversion {
 
 struct Example {
   std::string s;
+  int numRows;
   std::string expected;
 };
 

@@ -14,7 +14,7 @@ class Solution {
   public:
     virtual std::string getTitle() = 0;
     virtual std::string getRuntimeComplexity() = 0;
-    virtual std::string zigZagConversione(std::string s) = 0;
+    virtual std::string convert(std::string s, int numRows) = 0;
 };
 
 
