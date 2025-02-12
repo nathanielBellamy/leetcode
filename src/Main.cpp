@@ -34,9 +34,15 @@ int main() {
 //  delete longestPalindromeRun;
 
   // 06_ZigZagConversion
-  ZigZagConversion::Run* zigZagConversionRun = new ZigZagConversion::Run();
-  zigZagConversionRun->run();
-  delete zigZagConversionRun;
+//  ZigZagConversion::Run* zigZagConversionRun = new ZigZagConversion::Run();
+//  zigZagConversionRun->run();
+//  delete zigZagConversionRun;
+
+  // 07_ReverseInteger
+  ReverseInteger::Run* reverseInteger = new ReverseInteger::Run();
+  reverseInteger->run();
+  delete reverseInteger;
+
 
   std::cout << " == NSLeetCode END ==" << std::endl;
   return 0;

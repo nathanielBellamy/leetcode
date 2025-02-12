@@ -23,6 +23,8 @@
 #include "./05_LongestPalindrome/Benchmark.h"
 #include "./06_ZigZagConversion/Run.h"
 #include "./06_ZigZagConversion/Benchmark.h"
+#include "./07_ReverseInteger/Run.h"
+#include "./07_ReverseInteger/Benchmark.h"
 
 #define NSLC_BENCHMARK false
 

@@ -26,6 +26,9 @@ add_subdirectory(
 add_subdirectory(
         ${BASE_DIR}/06_ZigZagConversion
 )
+add_subdirectory(
+        ${BASE_DIR}/07_ReverseInteger
+)
 
 add_executable(NSLeetCode
         Main.h
@@ -41,6 +44,7 @@ target_link_libraries(NSLeetCode
     04_MedianOfTwoSortedArrays
     05_LongestPalindrome
     06_ZigZagConversion
+    07_ReverseInteger
 )
 set_target_properties(NSLeetCode PROPERTIES LINKER_LANGUAGE CXX)
 
