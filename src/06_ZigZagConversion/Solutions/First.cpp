@@ -19,7 +19,7 @@ std::string First::convert(std::string s, int numRows) {
   std::string result = "";
 
   const int sLength = s.length();
-  int modLength = std::ceil(sLength / numRows);
+  int modLength = std::ceil(sLength / numRows) + 1;
   if (numRows < 1)
     return result;
   if (sLength < 2 || numRows == 1 || (numRows > sLength))
