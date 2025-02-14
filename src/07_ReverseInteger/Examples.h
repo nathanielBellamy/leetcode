@@ -34,10 +34,34 @@ struct Examples {
       987654321
     };
 
+    Example fifth = {
+      2147483647,
+      0
+    };
+
+    Example sixth = {
+      -2147483648,
+      0
+    };
+
+    Example seventh = {
+      -565656,
+      -656565
+    };
+
+    Example eigth = {
+      -7654321,
+      -1234567
+    };
+
     list.push_back(first);
     list.push_back(second);
     list.push_back(third);
     list.push_back(fourth);
+    list.push_back(fifth);
+    list.push_back(sixth);
+    list.push_back(seventh);
+    list.push_back(eigth);
   }
 };
 

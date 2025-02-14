@@ -14,7 +14,7 @@ class Solution {
   public:
     virtual std::string getTitle() = 0;
     virtual std::string getRuntimeComplexity() = 0;
-    virtual int reverse(int x) = 0;
+    virtual int32_t reverse(int32_t x) = 0;
 };
 
 

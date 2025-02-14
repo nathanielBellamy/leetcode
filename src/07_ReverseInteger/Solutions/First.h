@@ -5,6 +5,7 @@
 #ifndef REVERSEINTEGER_SOLUTIONS_FIRST_H
 #define REVERSEINTEGER_SOLUTIONS_FIRST_H
 
+#include <iostream>
 #include <cmath>
 #include <string>
 #include <vector>
@@ -17,7 +18,7 @@ class First : public Solution {
   public:
     std::string getTitle() override;
     std::string getRuntimeComplexity() override;
-    int reverse(int x) override;
+    int32_t reverse(int32_t x) override;
 
 };
 
