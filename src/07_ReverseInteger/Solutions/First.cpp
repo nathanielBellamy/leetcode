@@ -16,7 +16,6 @@ std::string First::getRuntimeComplexity() {
 };
 
 int32_t First::reverse(int32_t x) {
-
   if (x < 10 && x > -10)
     return x;
 
@@ -41,7 +40,7 @@ int32_t First::reverse(int32_t x) {
     count = 0;
   }
 
-  int multiplier = 1;
+  int32_t multiplier = 1;
   for (int32_t i = digits.size() - 1; i >= 0; i--) {
     result += digits[i] * multiplier;
     if (result < 0)
