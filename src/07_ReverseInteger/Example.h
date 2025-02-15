@@ -10,8 +10,8 @@
 namespace ReverseInteger {
 
 struct Example {
-  int32_t x;
-  int32_t expected;
+  int x;
+  int expected;
 };
 
 } // ReverseInteger

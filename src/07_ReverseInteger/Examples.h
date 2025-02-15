@@ -54,6 +54,26 @@ struct Examples {
       -1234567
     };
 
+    Example ninth = {
+      1534236469,
+      0
+    };
+
+    Example tenth = {
+      -2147483412,
+      -2143847412
+    };
+
+    Example eleventh = {
+      1563847412,
+      0
+    };
+
+    Example twelfth = {
+      1463847412,
+      2147483641
+    };
+
     list.push_back(first);
     list.push_back(second);
     list.push_back(third);
@@ -62,6 +82,10 @@ struct Examples {
     list.push_back(sixth);
     list.push_back(seventh);
     list.push_back(eigth);
+    list.push_back(ninth);
+    list.push_back(tenth);
+    list.push_back(eleventh);
+    list.push_back(twelfth);
   }
 };
 

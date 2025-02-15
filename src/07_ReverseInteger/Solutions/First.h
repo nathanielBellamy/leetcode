@@ -18,7 +18,7 @@ class First : public Solution {
   public:
     std::string getTitle() override;
     std::string getRuntimeComplexity() override;
-    int32_t reverse(int32_t x) override;
+    int reverse(int x) override;
 
 };
 

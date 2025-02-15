@@ -15,16 +15,20 @@ std::string First::getRuntimeComplexity() {
   return "TBD";
 };
 
-int32_t First::reverse(int32_t x) {
+int First::reverse(int32_t x) {
   if (x < 10 && x > -10)
     return x;
 
-  int32_t count = 0;
-  int32_t result = 0;
+  int max = 2147483647;
+  int min = -2147483648;
+  double max_f = (double) max;
+  double min_f = (double) min;
+  int count = 0;
+  int result = 0;
 
   bool positive = x > 0;
 
-  std::vector<int32_t> digits;
+  std::vector<int> digits;
 
   while (x != 0) {
     while (x % 10 != 0) {
@@ -40,11 +44,31 @@ int32_t First::reverse(int32_t x) {
     count = 0;
   }
 
-  int32_t multiplier = 1;
-  for (int32_t i = digits.size() - 1; i >= 0; i--) {
+  if (digits.size() > 10 && digits.back() != 0) {
+    return 0;
+  }
+
+  int multiplier = 1;
+  for (int i = digits.size() - 1; i >= 0; i--) {
+    if (positive) {
+      const double ratio1 = ((double)digits[i] * multiplier) / max_f;
+      const double ratio2 = ((double)result / max_f) + ((double)digits[i] * (multiplier / max_f));
+
+      if ( ratio1 >= 1.0 || ratio2 >= 1.0 ) {
+        return 0;
+      }
+    } else {
+      const double ratio1 = ((double) digits[i] * multiplier) / min_f;
+      const double ratio2 = ((double) result / min_f) + ((double)digits[i] * (multiplier / min_f));
+
+      if ( ratio1 <= -1.0 ||  ratio2 <= - 1.0 )
+        return 0;
+    }
+
     result += digits[i] * multiplier;
-    if (result < 0)
-      return 0;
+
+    if (i == 0)
+      break;
     multiplier *= 10;
   }
 
