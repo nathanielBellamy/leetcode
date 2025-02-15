@@ -8,6 +8,7 @@
 #include <iostream>
 #include "./Examples.h"
 #include "./Solutions/First.h"
+#include "./Solutions/Second.h"
 
 namespace ReverseInteger {
 
@@ -20,6 +21,7 @@ class Run {
 
     void run();
     void first();
+    void second();
 };
 
 } // ReverseInteger

@@ -16,6 +16,16 @@ static void BM_07_ReverseInteger_First(benchmark::State& state) {
   delete run;
 }
 
+
+static void BM_07_ReverseInteger_Second(benchmark::State& state) {
+  ReverseInteger::Run* run = new ReverseInteger::Run();
+  for (auto _ : state) {
+    run->second();
+  }
+  delete run;
+}
+
 BENCHMARK(BM_07_ReverseInteger_First);
+BENCHMARK(BM_07_ReverseInteger_Second);
 
 #endif //BENCHMARKREVERSEINTEGER_H

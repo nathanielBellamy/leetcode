@@ -16,6 +16,8 @@ add_library(07_ReverseInteger
         Solutions/Solution.h
         Solutions/First.h
         Solutions/First.cpp
+        Solutions/Second.h
+        Solutions/Second.cpp
 )
 
 target_link_libraries(07_ReverseInteger

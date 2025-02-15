@@ -31,6 +31,7 @@ int First::reverse(int32_t x) {
   std::vector<int> digits;
 
   while (x != 0) {
+    const int rem = x % 10;
     while (x % 10 != 0) {
       if (positive) {
         x--;

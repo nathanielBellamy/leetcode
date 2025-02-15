@@ -16,7 +16,7 @@ Run::~Run() {
 }
 
 void Run::first() {
-  First* first = new First();
+  First* first = new First;
 
   for (auto example : examples->list) {
     auto actual = first->reverse(example.x);
@@ -27,13 +27,27 @@ void Run::first() {
   delete first;
 }
 
+void Run::second() {
+  Second* second = new Second;
+
+  for (auto example : examples->list) {
+    auto actual = second->reverse(example.x);
+    if (actual != example.expected)
+      throw std::runtime_error("\n\n ReverseInteger::Solutions::Second Error: Wrong Result \n\n");
+  }
+
+  delete second;
+}
+
 void Run::run() {
   std::cout << std::endl << " == 05_ReverseInteger Start == " << std::endl << std::endl;
 
       First* first = new First;
+      Second* second = new Second;
 
       std::vector<Solution*> solutions;
       solutions.push_back(first);
+      solutions.push_back(second);
 
       for (auto solution : solutions) {
         std::cout << " == ReverseInteger Solution : " << solution->getTitle() << " : " << solution->getRuntimeComplexity() << " == "  << std::endl;
@@ -48,6 +62,7 @@ void Run::run() {
       }
 
       delete first;
+      delete second;
 
       std::cout << std::endl << " == 05_ReverseInteger SUCCESS == " << std::endl;
       std::cout << " == 05_ReverseInteger END == " << std::endl << std::endl;
