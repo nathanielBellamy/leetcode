@@ -28,7 +28,10 @@ int Second::reverse(int32_t x) {
   //   that the environment does not store 64 bit integers?
   // - doesn't this imply num, a 32-bit integer
   //   is outside the bounds of a 32-bit integer?
-  if(num<INT_MIN || num>INT_MAX)return 0;
+  // - A: it does use larger than 32 bit numbers
+  //      but so did my original solution using doubles
+  if (num<INT_MIN || num>INT_MAX)
+    return 0;
   return num;
 };
 
